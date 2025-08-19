@@ -1,11 +1,12 @@
 from datetime import datetime
 
 from sqlalchemy import Column, Integer, String, DateTime
-from sqlalchemy.orm import relationship
 
 from app.db.base import Base
 
 class CvModel(Base):
+    __tablename__ = "cv"
+
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     original_name = Column(String, nullable=False)
     uploaded_at = Column(DateTime, default=datetime.now)
