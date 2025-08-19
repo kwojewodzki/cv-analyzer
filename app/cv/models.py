@@ -14,5 +14,6 @@ class CvModel(Base):
     text_content = Column(String, nullable=False)
 
 class SkillModel(Base):
-    id = Column(Integer, primary_key=True, index=True)
+    __tablename__ = "skill"
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     name = Column(String, nullable=False)
